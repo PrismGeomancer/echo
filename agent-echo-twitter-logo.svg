@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="70%">
+      <stop offset="0" stop-color="#171222"/>
+      <stop offset="0.55" stop-color="#09090d"/>
+      <stop offset="1" stop-color="#030305"/>
+    </radialGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#efe9ff"/>
+      <stop offset="0.45" stop-color="#c7b2ff"/>
+      <stop offset="1" stop-color="#8f6ee8"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="22" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <circle cx="600" cy="600" r="410" fill="none" stroke="#b99cff" stroke-opacity="0.08" stroke-width="2"/>
+  <circle cx="600" cy="600" r="330" fill="none" stroke="#b99cff" stroke-opacity="0.13" stroke-width="2"/>
+  <circle cx="600" cy="600" r="250" fill="none" stroke="#b99cff" stroke-opacity="0.2" stroke-width="3"/>
+  <circle cx="600" cy="600" r="176" fill="#08080b" stroke="url(#signal)" stroke-width="9" filter="url(#glow)"/>
+  <g fill="url(#signal)" filter="url(#glow)">
+    <rect x="500" y="550" width="22" height="100" rx="11"/>
+    <rect x="545" y="495" width="22" height="210" rx="11"/>
+    <rect x="589" y="430" width="22" height="340" rx="11"/>
+    <rect x="633" y="495" width="22" height="210" rx="11"/>
+    <rect x="678" y="550" width="22" height="100" rx="11"/>
+  </g>
+  <circle cx="600" cy="600" r="7" fill="#ffffff"/>
+</svg>
